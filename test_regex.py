@@ -92,20 +92,22 @@ More help is available by typing NET HELPMSG 2221.
 
     match = re.findall(regex, output)
     assert len(match) == 1
+
 def test_windows_domain_name():
     test = """
 Domain Name
-catflix01.local
+catflix04.local
     """
-    regex = "Domain\s+([\w.-]+)"
+    regex = "Domain\s+catflix(\d{2})\.local"
     match = re.findall(regex, test)
     assert len(match) == 1
+    assert match[0] == "04"
 
 def test_windows_domain_name_wrong():
     test = """
 Domain Name
 dogflix01.local
     """
-    regex = "Domain\s+([\w.-]+)"
+    regex = "Domain\s+catflix(\d{2})\.local"
     match = re.findall(regex, test)
     assert len(match) == 0
