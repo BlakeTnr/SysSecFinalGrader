@@ -10,14 +10,27 @@ def check_public_ip(vm: vim.VirtualMachine, content: vim.ServiceInstanceContent)
     gradinglib.vm_execute_firewalloff_command(vm, guest_username, guest_password, content)
 
     try:
-        output = gradinglib.execute_vm_command(vm, guest_username, guest_password, "ifconfig em0", content, "/bin/sh")
-        regex = "(?<=inet 192.168.)\d*(?=.0)"
-        match = re.findall(regex, output)[0]
-        pfsensepublic = "10" + match
+        # Use ipconfig for Windows
+        output = gradinglib.execute_vm_command(vm, guest_username, guest_password, "ipconfig", content, "cmd.exe")
+        
+        # Adjust regex to match Windows IP address format
+        regex = r"IPv4 Address[^\d]*(\d+\.\d+\.\d+\.\d+)"
+        match = re.search(regex, output)
+        
+        if not match:
+            logger.warn(f"FAILED! {vm.name} in {vm.parent.name} failed. Could not find an IP address.")
+            return
+        
+        ip_address = match.group(1)
+        logger.debug(f"Extracted IP address: {ip_address}")
+        
+        # Extract the last octet of the IP address
+        last_octet = ip_address.split('.')[-1]
+        pfsensepublic = "10" + last_octet
         teamname = vm.parent.name
         teamnumber = gradinglib.team_name_to_number(teamname)
 
-        if(pfsensepublic == "10" + str(teamnumber)):
+        if pfsensepublic == "10" + str(teamnumber):
             logger.info(f"SUCCESS! {vm.name} in {vm.parent.name} passed. Public IP is correct.")
         else:
             logger.warn(f"FAILED! {vm.name} in {vm.parent.name} failed. Public IP is incorrect.")
