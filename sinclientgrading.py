@@ -14,7 +14,7 @@ def check_public_ip(vm: vim.VirtualMachine, content: vim.ServiceInstanceContent)
         output = gradinglib.execute_vm_command(vm, guest_username, guest_password, "ipconfig", content, "cmd.exe")
         
         # Adjust regex to match Windows IP address format
-        regex = r"IPv4 Address[^\d]*(\d+\.\d+\.\d+\.\d+)"
+        regex = "(?<=IPv4 Address[^\d]*)(\d+.\d+.\d+.\d+)"
         match = re.search(regex, output)
         
         if not match:
