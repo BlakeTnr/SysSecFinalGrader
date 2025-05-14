@@ -33,7 +33,7 @@ def check_adminnet_ip(vm: vim.VirtualMachine, content: vim.ServiceInstanceConten
 
     try:
         output = gradinglib.execute_vm_command(vm, guest_username, guest_password, "ifconfig em1", content, "/bin/sh")
-        regex = "(?<=inet 10.42.)\d*(?=.0)"
+        regex = "(?<=inet 10.42.)\d*(?=.254)"
         match = re.findall(regex, output)[0]
         teamname = vm.parent.name
         teamnumber = gradinglib.team_name_to_number(teamname)
@@ -55,7 +55,7 @@ def check_servernet_ip(vm: vim.VirtualMachine, content: vim.ServiceInstanceConte
 
     try:
         output = gradinglib.execute_vm_command(vm, guest_username, guest_password, "ifconfig em2", content, "/bin/sh")
-        regex = "(?<=inet 10.43.)\d*(?=.0)"
+        regex = "(?<=inet 10.43.)\d*(?=.254)"
         match = re.findall(regex, output)[0]
         teamname = vm.parent.name
         teamnumber = gradinglib.team_name_to_number(teamname)
