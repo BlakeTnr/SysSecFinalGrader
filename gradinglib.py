@@ -280,3 +280,18 @@ def get_vm_creds(vm: vim.VirtualMachine):
 
     # --- Return the credentials ---
     return guest_username, guest_password
+
+def get_team_name(team_number: int):
+    if(team_number < 10):
+        return f"Team_0{team_number}"
+    else:
+        return f"Team_{team_number}"
+
+def team_name_to_number(team_name: str):
+    """
+    Convert a team name to its corresponding number.
+    """
+    regex = "(?<=Team_)\d\d"
+    match = re.findall(regex, team_name)[0]
+    intmatch = int(match)
+    return intmatch
