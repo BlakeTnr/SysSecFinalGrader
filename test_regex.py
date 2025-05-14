@@ -92,3 +92,20 @@ More help is available by typing NET HELPMSG 2221.
 
     match = re.findall(regex, output)
     assert len(match) == 1
+def test_windows_domain_name():
+    test = """
+Domain Name
+catflix01.local
+    """
+    regex = "Domain\s+([\w.-]+)"
+    match = re.findall(regex, test)
+    assert len(match) == 1
+
+def test_windows_domain_name_wrong():
+    test = """
+Domain Name
+dogflix01.local
+    """
+    regex = "Domain\s+([\w.-]+)"
+    match = re.findall(regex, test)
+    assert len(match) == 0
