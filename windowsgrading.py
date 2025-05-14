@@ -2,7 +2,7 @@ import gradinglib
 from logger import logger
 from pyVmomi import vim
 
-def check_adadmin_in_secdev(vm: vim.VirtualMachine, content: vim.ServiceInstanceContent):
+def check_adadmin_exists(vm: vim.VirtualMachine, content: vim.ServiceInstanceContent):
     guest_username, guest_password = gradinglib.get_vm_creds(vm)
 
     try:
@@ -38,5 +38,5 @@ def check_adadmin_in_secdev(vm: vim.VirtualMachine, content: vim.ServiceInstance
 
 def check_ad(vm: vim.VirtualMachine, content: vim.ServiceInstanceContent):
     logger.debug(f"Running AD checks for {vm.name}...")
-    check_adadmin_in_secdev(vm, content)
+    check_adadmin_exists(vm, content)
     check_adadmin_in_secdev(vm, content)
