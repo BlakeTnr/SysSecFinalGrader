@@ -28,7 +28,7 @@ def check_public_ip(vm: vim.VirtualMachine, content: vim.ServiceInstanceContent)
         last_octet = ip_address.split('.')[-1]
         pfsensepublic = "10" + last_octet
         teamname = vm.parent.name
-        teamnumber = gradinglib.team_name_to_number(teamname)
+        teamnumber = gradinglib.team_name_to_number(vm.parent.name)
 
         if pfsensepublic == "10" + str(teamnumber):
             logger.info(f"SUCCESS! {vm.name} in {vm.parent.name} passed. Public IP is correct.")
