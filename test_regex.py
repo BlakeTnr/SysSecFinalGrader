@@ -46,3 +46,49 @@ def test_team_name_to_number():
     test2 = "Team_33"
     intmatch = gradinglib.team_name_to_number(test2)
     assert intmatch == 33
+
+def test_windows_adadmin_exists():
+    output = """
+User name                    Blake
+Full Name                    Blake Turner
+Comment
+User's comment
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            9/6/2024 10:15:40 AM
+Password expires             Never
+Password changeable          9/6/2024 10:15:40 AM
+Password required            No
+User may change password     Yes
+
+Workstations allowed         All
+Logon script
+User profile
+Home directory
+Last logon                   9/6/2024 10:15:39 AM
+
+Logon hours allowed          All
+
+Local Group Memberships      *Administrators       *docker-users
+Global Group memberships     *None
+The command completed successfully.
+    """
+
+    regex = "not be found"
+
+    match = re.findall(regex, output)
+    assert len(match) == 0
+
+def test_windows_adadmin_not_exists():
+    output = """
+The user name could not be found.
+
+More help is available by typing NET HELPMSG 2221.
+    """
+
+    regex = "not be found"
+
+    match = re.findall(regex, output)
+    assert len(match) == 1
