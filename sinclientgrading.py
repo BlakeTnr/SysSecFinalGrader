@@ -6,7 +6,6 @@ import re
 def check_public_ip(vm: vim.VirtualMachine, content: vim.ServiceInstanceContent):
     logger.debug(f"Running public IP checks for {vm.name}...")
     guest_username, guest_password = gradinglib.get_vm_creds(vm)
-    gradinglib.power_on_vm(vm)
     gradinglib.vm_execute_firewalloff_command(vm, guest_username, guest_password, content)
 
     try:
