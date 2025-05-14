@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GPO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/Settings">
+  <Identifier>
+    <Identifier xmlns="http://www.microsoft.com/GroupPolicy/Types">{31b2f340-016d-11d2-945f-00c04fb984f9}</Identifier>
+    <Domain xmlns="http://www.microsoft.com/GroupPolicy/Types">catflix01.local</Domain>
+  </Identifier>
+  <Name>Default Domain Policy</Name>
+  <IncludeComments>true</IncludeComments>
+  <CreatedTime>2025-04-28T22:35:12</CreatedTime>
+  <ModifiedTime>2025-04-28T22:39:14</ModifiedTime>
+  <ReadTime>2025-05-14T03:00:22.7963389Z</ReadTime>
+  <SecurityDescriptor>
+    <SDDL xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">O:DAG:DAD:PAI(A;;CCLCSWRPWPLORCWDWO;;;DA)(A;CIIO;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCLCSWRPWPLORCWDWO;;;S-1-5-21-4090698675-1526931094-3048149747-519)(A;CIIO;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-4090698675-1526931094-3048149747-519)(A;;CCLCSWRPWPLORCWDWO;;;DA)(A;CIIO;CCDCLCSWRPWPDTLOSDRCWDWO;;;CO)(A;CI;CCDCLCSWRPWPDTLOSDRCWDWO;;;SY)(A;CI;LCRPLORC;;;AU)(OA;CI;CR;edacfd8f-ffb3-11d1-b41d-00a0c968f939;;AU)(A;CI;LCRPLORC;;;ED)S:AI(OU;CIIDSA;WPWD;;f30e3bc2-9ff0-11d1-b603-0000f80367c1;WD)(OU;CIIOIDSA;WP;f30e3bbe-9ff0-11d1-b603-0000f80367c1;bf967aa5-0de6-11d0-a285-00aa003049e2;WD)(OU;CIIOIDSA;WP;f30e3bbf-9ff0-11d1-b603-0000f80367c1;bf967aa5-0de6-11d0-a285-00aa003049e2;WD)</SDDL>
+    <Owner xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">
+      <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-21-4090698675-1526931094-3048149747-512</SID>
+      <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">CATFLIX01\Domain Admins</Name>
+    </Owner>
+    <Group xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">
+      <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-21-4090698675-1526931094-3048149747-512</SID>
+      <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">CATFLIX01\Domain Admins</Name>
+    </Group>
+    <PermissionsPresent xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">true</PermissionsPresent>
+    <Permissions xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">
+      <InheritsFromParent>false</InheritsFromParent>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-9</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Read</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-18</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">NT AUTHORITY\SYSTEM</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Edit, delete, modify security</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-11</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">NT AUTHORITY\Authenticated Users</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Apply Group Policy</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+    </Permissions>
+    <AuditingPresent xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">false</AuditingPresent>
+  </SecurityDescriptor>
+  <FilterDataAvailable>true</FilterDataAvailable>
+  <Computer>
+    <VersionDirectory>3</VersionDirectory>
+    <VersionSysvol>3</VersionSysvol>
+    <Enabled>true</Enabled>
+    <ExtensionData>
+      <Extension xmlns:q1="http://www.microsoft.com/GroupPolicy/Settings/Security" xsi:type="q1:SecuritySettings">
+        <q1:Account>
+          <q1:Name>ClearTextPassword</q1:Name>
+          <q1:SettingBoolean>false</q1:SettingBoolean>
+          <q1:Type>Password</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>LockoutBadCount</q1:Name>
+          <q1:SettingNumber>0</q1:SettingNumber>
+          <q1:Type>Account Lockout</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>MaximumPasswordAge</q1:Name>
+          <q1:SettingNumber>42</q1:SettingNumber>
+          <q1:Type>Password</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>MinimumPasswordAge</q1:Name>
+          <q1:SettingNumber>1</q1:SettingNumber>
+          <q1:Type>Password</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>MinimumPasswordLength</q1:Name>
+          <q1:SettingNumber>7</q1:SettingNumber>
+          <q1:Type>Password</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>PasswordComplexity</q1:Name>
+          <q1:SettingBoolean>true</q1:SettingBoolean>
+          <q1:Type>Password</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>PasswordHistorySize</q1:Name>
+          <q1:SettingNumber>24</q1:SettingNumber>
+          <q1:Type>Password</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>MaxClockSkew</q1:Name>
+          <q1:SettingNumber>5</q1:SettingNumber>
+          <q1:Type>Kerberos</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>MaxRenewAge</q1:Name>
+          <q1:SettingNumber>7</q1:SettingNumber>
+          <q1:Type>Kerberos</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>MaxServiceAge</q1:Name>
+          <q1:SettingNumber>600</q1:SettingNumber>
+          <q1:Type>Kerberos</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>MaxTicketAge</q1:Name>
+          <q1:SettingNumber>10</q1:SettingNumber>
+          <q1:Type>Kerberos</q1:Type>
+        </q1:Account>
+        <q1:Account>
+          <q1:Name>TicketValidateClient</q1:Name>
+          <q1:SettingBoolean>true</q1:SettingBoolean>
+          <q1:Type>Kerberos</q1:Type>
+        </q1:Account>
+        <q1:SecurityOptions>
+          <q1:KeyName>MACHINE\System\CurrentControlSet\Control\Lsa\NoLMHash</q1:KeyName>
+          <q1:SettingNumber>1</q1:SettingNumber>
+          <q1:Display>
+            <q1:Name>Network security: Do not store LAN Manager hash value on next password change</q1:Name>
+            <q1:Units />
+            <q1:DisplayBoolean>true</q1:DisplayBoolean>
+          </q1:Display>
+        </q1:SecurityOptions>
+        <q1:SecurityOptions>
+          <q1:SystemAccessPolicyName>ForceLogoffWhenHourExpire</q1:SystemAccessPolicyName>
+          <q1:SettingNumber>0</q1:SettingNumber>
+        </q1:SecurityOptions>
+        <q1:SecurityOptions>
+          <q1:SystemAccessPolicyName>LSAAnonymousNameLookup</q1:SystemAccessPolicyName>
+          <q1:SettingNumber>0</q1:SettingNumber>
+        </q1:SecurityOptions>
+        <q1:Blocked>false</q1:Blocked>
+      </Extension>
+      <Name>Security</Name>
+    </ExtensionData>
+    <ExtensionData>
+      <Extension xmlns:q2="http://www.microsoft.com/GroupPolicy/Settings/PublicKey" xsi:type="q2:PublicKeySettings">
+        <q2:EFSSettings>
+          <q2:AllowEFS>2</q2:AllowEFS>
+          <q2:Options>0</q2:Options>
+          <q2:CacheTimeout>0</q2:CacheTimeout>
+          <q2:KeyLen>0</q2:KeyLen>
+        </q2:EFSSettings>
+        <q2:EFSRecoveryAgent>
+          <q2:IssuedTo>Administrator</q2:IssuedTo>
+          <q2:IssuedBy>Administrator</q2:IssuedBy>
+          <q2:ExpirationDate>2125-04-04T22:39:14Z</q2:ExpirationDate>
+          <q2:CertificatePurpose>
+            <q2:Purpose>1.3.6.1.4.1.311.10.3.4.1</q2:Purpose>
+          </q2:CertificatePurpose>
+          <q2:Data>0200000001000000CC0000001C0000006C0000000100000000000000000000000000000001000000390039003400350062003900370066002D0032003900370065002D0034006600340037002D0062003400620037002D0037006100620039003200610039003500340066003800640000000000000000004D006900630072006F0073006F0066007400200045006E00680061006E006300650064002000430072007900700074006F0067007200610070006800690063002000500072006F00760069006400650072002000760031002E003000000000000300000001000000140000001FD67B79AA43B298B2A24589EDFC7F7A2D6D244520000000010000008A030000308203863082026EA003020102021064A7E8AA3643E1A84F780817911653F2300D06092A864886F70D01010505003050311630140603550403130D41646D696E6973747261746F72310C300A0603550407130345465331283026060355040B131F4546532046696C6520456E6372797074696F6E2043657274696669636174653020170D3235303432383232333931345A180F32313235303430343232333931345A3050311630140603550403130D41646D696E6973747261746F72310C300A0603550407130345465331283026060355040B131F4546532046696C6520456E6372797074696F6E20436572746966696361746530820122300D06092A864886F70D01010105000382010F003082010A0282010100B9F040E5A764E6A85B280560B03A2FF2C69DDCA6A2C587DB09C0D3D088407FF03095D896E4BE1F00E89F1BF147B1E9317BD83D13F63ED926E5385DB33B525082394C2E4423073897D4F948F15D2CA07497095FB8752EE227FF70EFFEF0E52C8EC826074C005AEC335D51AC3F74C8E278C2C3FFA22BAABD85835C7DB5FBA1BC622ADD41DD8611AB7EEF7C516555E7CEE537B457D8CA25F69AE01129A09FF580A07C2F04A7E0F5E6A3E53563AFC9ABAE274C30AFC020F9095F14F6EE87748448B0BC86F2969F84815AA2D90EDEB926186948AC976E524CD7129E1EF5A4B6FD25ACF478C18F08EB53D111D2C418674BD82C36811D4925E3F557157670D0152BDE790203010001A35A305830160603551D25040F300D060B2B0601040182370A03040130330603551D11042C302AA028060A2B060104018237140203A01A0C1841646D696E6973747261746F7240434154464C495830310030090603551D1304023000300D06092A864886F70D010105050003820101004BE594E13C2D129CBD14041C67BCC62AFFF5F07CBC2886474F88831F3C413DDB68C6E389D07F21A81133009D2C5C9E5FFF6FCFB66F26011C470A46B2542CD6CCFC7148C51FBE6D9C6D538987CF2FA4C513864C121FD48CFE3C3432AF3222614FAAE8AFB6B8F3756D3A31D852DB62B6B7ACDF4320C3451B25AED00C207D3A7427B0F2015D99637A82D79D618F1D87782085FB6779BFFE78229701D9D9FDF121D90BBA5B1460417FCB2006143A6FB16B4DC709D1AF7D9597F971E2C365AFB3772E81480EE62179CE9A12DDBE1FD1EF7C5C6B837336C97511421C3FCBB6897CBCCA76952F015DBC98D64074A0CEF00C7A0B36D0E6805660B4E66F289EA5A54BC7B6</q2:Data>
+        </q2:EFSRecoveryAgent>
+        <q2:RootCertificateSettings>
+          <q2:AllowNewCAs>true</q2:AllowNewCAs>
+          <q2:TrustThirdPartyCAs>true</q2:TrustThirdPartyCAs>
+          <q2:RequireUPNNamingConstraints>false</q2:RequireUPNNamingConstraints>
+        </q2:RootCertificateSettings>
+      </Extension>
+      <Name>Public Key</Name>
+    </ExtensionData>
+    <ExtensionData>
+      <Extension xmlns:q3="http://www.microsoft.com/GroupPolicy/Settings/Registry" xsi:type="q3:RegistrySettings">
+        <q3:Blocked>false</q3:Blocked>
+      </Extension>
+      <Name>Registry</Name>
+    </ExtensionData>
+  </Computer>
+  <User>
+    <VersionDirectory>0</VersionDirectory>
+    <VersionSysvol>0</VersionSysvol>
+    <Enabled>true</Enabled>
+  </User>
+  <LinksTo>
+    <SOMName>catflix01</SOMName>
+    <SOMPath>catflix01.local</SOMPath>
+    <Enabled>true</Enabled>
+    <NoOverride>false</NoOverride>
+  </LinksTo>
+</GPO>
